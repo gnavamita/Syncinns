@@ -6,6 +6,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -60,6 +61,17 @@ public class HomePage {
         driver.findElement(By.name("company_name")).sendKeys("company@yopmail.com");
         driver.findElement(By.name("message")).sendKeys("This is a test!");
         driver.findElement(By.xpath("//button[@type='submit']")).click();
+    }
+
+    @Test
+    public void Solutions_For_Hoteliers() throws InterruptedException {
+        Thread.sleep(2000);
+       WebElement solutions = driver.findElement(By.xpath("//a[text()='Solutions']"));
+        Actions actions = new Actions(driver);
+        Thread.sleep(2000);
+        actions.moveToElement(solutions).perform();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//div[text()='For Hoteliers']")).click();
     }
 
     @AfterMethod(enabled = false)

@@ -20,25 +20,33 @@ public class HomePage {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get("https://syncinns.com/");
+        driver.manage().window().maximize();
     }
 
-    public void Request_A_Demo() {
+    public void Request_A_Demo() throws InterruptedException {
         driver.findElement(By.xpath("//span[normalize-space()='Request a Demo']")).click();
         driver.findElement(By.id("nameModern")).sendKeys("tester");
         driver.findElement(By.id("finalEmailModern")).sendKeys("tester@yopmail.com");
         driver.findElement(By.xpath("//div[@class='iti__selected-country-primary']")).click();
+        Thread.sleep(3000);
         WebElement flag = driver.findElement(By.xpath("//input[@placeholder='Search']"));
-        flag.sendKeys("saudi");
-        flag.sendKeys(Keys.ARROW_DOWN);
+        flag.sendKeys("india");
+        Thread.sleep(3000);
         flag.sendKeys(Keys.ENTER);
         driver.findElement(By.id("mobile_code")).sendKeys("9876543210");
-        WebElement solution = driver.findElement(By.xpath("//option[text()='Select']"));
+        WebElement solution = driver.findElement(By.id("employeeModern"));
+        solution.click();
+        Thread.sleep(3000);
         Select select = new Select(solution);
-        select.selectByVisibleText("Hotelier (PMS)");
+        Thread.sleep(3000);
+        select.selectByValue("68381b13e00523079ccb3226");
+        driver.findElement(By.id("propertyModern")).sendKeys("BusinessName");
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//div[@class='datepicker-icon-wrapper']")).sendKeys("April 10,2026" );
 
     }
 
-    @AfterMethod
+    @AfterMethod(enabled = false)
     public void close_browser() {
         driver.close();
     }

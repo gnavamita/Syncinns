@@ -44,7 +44,8 @@ public class HomePage {
         select.selectByValue("68381b13e00523079ccb3226");
         driver.findElement(By.id("propertyModern")).sendKeys("BusinessName");
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//input[@placeholder='Choose a date']")).sendKeys("April 10,2026");;
+        driver.findElement(By.xpath("//input[@placeholder='Choose a date']")).sendKeys("April 10,2026");
+        ;
 //        Thread.sleep(3000);
 //        Calendar.click();
 //        Calendar.
@@ -66,13 +67,57 @@ public class HomePage {
     @Test
     public void Solutions_For_Hoteliers() throws InterruptedException {
         Thread.sleep(2000);
-       WebElement solutions = driver.findElement(By.xpath("//a[text()='Solutions']"));
+        WebElement solutions = driver.findElement(By.xpath("//a[text()='Solutions']"));
         Actions actions = new Actions(driver);
         Thread.sleep(2000);
         actions.moveToElement(solutions).perform();
         Thread.sleep(2000);
         driver.findElement(By.xpath("//div[text()='For Hoteliers']")).click();
     }
+
+    @Test
+    public void Solutions_For_Transporters() throws InterruptedException {
+        Thread.sleep(2000);
+        WebElement solutions = driver.findElement(By.xpath("//a[text()='Solutions']"));
+        Actions actions = new Actions(driver);
+        Thread.sleep(2000);
+        actions.moveToElement(solutions).perform();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//div[text()='For Transporters']")).click();
+    }
+
+    @Test
+    public void Solutions_For_Reservation_Agencies() throws InterruptedException {
+        Thread.sleep(2000);
+        WebElement solutions = driver.findElement(By.xpath("//a[text()='Solutions']"));
+        Actions actions = new Actions(driver);
+        Thread.sleep(2000);
+        actions.moveToElement(solutions).perform();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//div[text()='For Reservation Agencies']")).click();
+    }
+
+    public void Solutions_For_Travel_Companies() throws InterruptedException {
+        Thread.sleep(2000);
+        WebElement solutions = driver.findElement(By.xpath("//a[text()='Solutions']"));
+        Actions actions = new Actions(driver);
+        Thread.sleep(2000);
+        actions.moveToElement(solutions).perform();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//div[text()='For Travel Companies']")).click();
+    }
+
+    public void Solutions_For_B2B_Marketplace() throws InterruptedException {
+        Thread.sleep(2000);
+        WebElement solutions = driver.findElement(By.xpath("//a[text()='Solutions']"));
+        Actions actions = new Actions(driver);
+        Thread.sleep(2000);
+        actions.moveToElement(solutions).perform();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//div[text()='For B2B Marketplace']")).click();
+    }
+
+
 
     @AfterMethod(enabled = false)
     public void close_browser() {

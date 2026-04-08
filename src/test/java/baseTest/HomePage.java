@@ -26,25 +26,33 @@ public class HomePage {
 
     @Test
     public void Request_A_Demo() throws InterruptedException {
-        driver.findElement(By.xpath("//span[normalize-space()='Request a Demo']")).click();
-        driver.findElement(By.id("nameModern")).sendKeys("tester");
-        driver.findElement(By.id("finalEmailModern")).sendKeys("tester@yopmail.com");
-        driver.findElement(By.xpath("//div[@class='iti__selected-country-primary']")).click();
-        Thread.sleep(3000);
-        WebElement flag = driver.findElement(By.xpath("//input[@placeholder='Search']"));
-        flag.sendKeys("india");
-        Thread.sleep(3000);
-        flag.sendKeys(Keys.ENTER);
-        driver.findElement(By.id("mobile_code")).sendKeys("9876543210");
-        WebElement solution = driver.findElement(By.id("employeeModern"));
-        solution.click();
-        Thread.sleep(3000);
-        Select select = new Select(solution);
-        Thread.sleep(3000);
-        select.selectByValue("68381b13e00523079ccb3226");
-        driver.findElement(By.id("propertyModern")).sendKeys("BusinessName");
-        Thread.sleep(3000);
-        driver.findElement(By.xpath("//input[@placeholder='Choose a date']")).sendKeys("April 10,2026");
+        try {
+
+            driver.findElement(By.xpath("//span[normalize-space()='Request a Demo']")).click();
+            driver.findElement(By.id("nameModern")).sendKeys("tester");
+            driver.findElement(By.id("finalEmailModern")).sendKeys("tester@yopmail.com");
+            driver.findElement(By.xpath("//div[@class='iti__selected-country-primary']")).click();
+            Thread.sleep(3000);
+            WebElement flag = driver.findElement(By.xpath("//input[@placeholder='Search']"));
+            flag.sendKeys("india");
+            Thread.sleep(3000);
+            flag.sendKeys(Keys.ENTER);
+            driver.findElement(By.id("mobile_code")).sendKeys("9876543210");
+            WebElement solution = driver.findElement(By.id("employeeModern"));
+            solution.click();
+            Thread.sleep(3000);
+            Select select = new Select(solution);
+            Thread.sleep(3000);
+            select.selectByValue("68381b13e00523079ccb3226");
+            driver.findElement(By.id("propertyModern")).sendKeys("BusinessName");
+            Thread.sleep(3000);
+            driver.findElement(By.xpath("//input[@placeholder='Choose a date']")).sendKeys("April 10,2026");
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            System.out.println("request a demo form filled");
+        }
+
         ;
 //        Thread.sleep(3000);
 //        Calendar.click();
@@ -156,14 +164,36 @@ public class HomePage {
             WebElement calendar = driver.findElement(By.xpath("//input[@placeholder='Choose a date']"));
             calendar.sendKeys("April 10,2026");
         } catch (Exception e) {
-            System.out.println(e);;
-        }
-        finally {
+            System.out.println(e);
+            ;
+        } finally {
             System.out.println("form filled");
         }
     }
 
-    @AfterMethod(enabled = false)
+    @Test
+    public void Partner_With_Us_For_Sellers() {
+        driver.findElement(By.xpath("//span[text()='Partner with us']")).click();
+        driver.findElement(By.xpath("//div[@class='banner-BtnBox partnerbanner-BtnBox']//span[text()='For Sellers']")).click();
+        driver.findElement(By.xpath("//a[normalize-space()='Start your Listing']")).click();
+    }
+
+    @Test
+    public void Partner_With_Us_For_Buyers() {
+        driver.findElement(By.xpath("//span[text()='Partner with us']")).click();
+        driver.findElement(By.xpath("//div[@class='banner-BtnBox partnerbanner-BtnBox']//a[@href='https://syncinns.com/buy-from-marketplace']")).click();
+        driver.findElement(By.xpath("//a[normalize-space()='Register Now']")).click();
+    }
+
+    @Test
+    public void Partner_With_Us_For_Affiliates() {
+        driver.findElement(By.xpath("//span[text()='Partner with us']")).click();
+        driver.findElement(By.xpath("//div[@class='banner-BtnBox partnerbanner-BtnBox']//a[@href='https://syncinns.com/affiliate-program']")).click();
+        driver.findElement(By.xpath("//a[normalize-space()='Register Now →']")).click();
+    }
+
+
+    @AfterMethod //(enabled = false)
     public void close_browser() {
         driver.close();
     }

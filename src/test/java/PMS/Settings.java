@@ -3,7 +3,9 @@ package PMS;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -24,7 +26,7 @@ public class Settings {
     }
 
     @Test
-    public void settingModule() throws InterruptedException{
+    public void settingModule() throws InterruptedException {
         Thread.sleep(4000);
         driver.findElement(By.xpath("//app-side-nav[@class='ng-star-inserted']//a[@href='/syncinns-pms/settings']")).click();
         Thread.sleep(4000);
@@ -40,4 +42,57 @@ public class Settings {
         Thread.sleep(3000);
         driver.findElement(By.xpath("//div[@class='gs-acc-header']//span[text()='Account Settings']")).click();
     }
+
+    @Test
+    public void hrmModule() throws InterruptedException {
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("//a[@class='nav-link dropdown-toggle']//span[text()='HRM']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//a[normalize-space()='Manage Employee']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//a[normalize-space()='Manage Roster']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//a[normalize-space()='Manual Attendance']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//a[normalize-space()='Daily Attendance']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//a[normalize-space()='Daily Attendance']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//a[normalize-space()='Attendance Summary']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//a[normalize-space()='Leaves']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//a[normalize-space()='My Leaves']")).click();
+    }
+
+    @Test
+    public void salaryManagementModule() throws InterruptedException {
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("//a[@class='nav-link dropdown-toggle']//span[text()='Salary Management']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//a[normalize-space()='Create Salary Category']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//a[normalize-space()='Generate Salary']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//a[normalize-space()='Generate Payroll']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//a[normalize-space()='Salary List']")).click();
+    }
+
+    @Test
+    public void customerModule() {
+        driver.findElement(By.xpath("//a[@class='nav-link dropdown-toggle']//span[text()='Customer']")).click();
+        driver.findElement(By.xpath("//a[normalize-space()='Customer List']")).click();
+        driver.findElement(By.xpath("//a[normalize-space()='Balance Sheet']")).click();
+    }
+
+    @Test
+    public void reservationsModule() {
+        driver.findElement(By.xpath("//a[@class='nav-link dropdown-toggle']//span[text()='Reservations']")).click();
+        driver.findElement(By.xpath("//a[normalize-space()='New Reservation']")).click();
+        driver.findElement(By.xpath("//a[normalize-space()='Reservation List']")).click();
+        driver.findElement(By.xpath("//a[normalize-space()='Check In']")).click();
+        driver.findElement(By.xpath("//a[normalize-space()='Check Out']")).click();
+    }
+
 }

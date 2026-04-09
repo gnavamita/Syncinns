@@ -8,8 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 @Test
-public class Dashboard {
-
+public class Settings {
     WebDriver driver;
 
     @BeforeMethod
@@ -25,23 +24,20 @@ public class Dashboard {
     }
 
     @Test
-    public void tabMenuList() throws InterruptedException {
-        //driver.findElement(By.id("overview-tab")).click();
-
-        driver.findElement(By.id("check-tab")).click();
+    public void settingModule() throws InterruptedException{
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("//app-side-nav[@class='ng-star-inserted']//a[@href='/syncinns-pms/settings']")).click();
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("//div[@class='gs-acc-header']//span[text()='Company Management']")).click();
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//button[normalize-space()='Front Office & Reservation Desk']")).click();
+        driver.findElement(By.xpath("//span[text()='Booking']")).click();
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//ul[@class='nav nav-tabs mb-0']//button[normalize-space()='House Keeping']")).click();
+        driver.findElement(By.xpath("//span[normalize-space()='Room Management']")).click();
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//button[normalize-space()='Accounts']")).click();
+        driver.findElement(By.xpath("//span[text()='Hotel Facilities']")).click();
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//button[normalize-space()='HR Dashboard']")).click();
+        driver.findElement(By.xpath("//span[normalize-space()='Operations']")).click();
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//button[normalize-space()='Restaurant']")).click();
-        Thread.sleep(3000);
-
+        driver.findElement(By.xpath("//div[@class='gs-acc-header']//span[text()='Account Settings']")).click();
     }
-
-
 }

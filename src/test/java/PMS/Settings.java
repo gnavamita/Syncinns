@@ -46,17 +46,21 @@ public class Settings {
         driver.findElement(By.xpath("//span[text()='Email Setting']")).click();
         Thread.sleep(4000);
         driver.findElement(By.xpath("//h5[normalize-space()='E-mail Template']")).click();
-//
-//
-//        Thread.sleep(3000);
-//        driver.findElement(By.xpath("//span[text()='Booking']")).click();
-//        Thread.sleep(3000);
-//        driver.findElement(By.xpath("//i[@class='fas fa-chevron-left']//span[normalize-space()='Room Management']")).click();
-//        Thread.sleep(3000);
-//        driver.findElement(By.xpath("//span[text()='Hotel Facilities']")).click();
-//        Thread.sleep(3000);
-//        driver.findElement(By.xpath("//span[normalize-space()='Operations']")).click();
-//        Thread.sleep(3000);
-//        driver.findElement(By.xpath("//div[@class='gs-acc-header']//span[text()='Account Settings']")).click();
+        driver.findElement(By.xpath("//span[text()='Seasons']")).click();
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("//h5[normalize-space()='Seasons']")).click();
+        driver.findElement(By.xpath("//span[text()='Seasons']")).click();
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("//h5[normalize-space()='Seasons']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//span[text()='Booking']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//i[@class='fas fa-chevron-left']//span[normalize-space()='Room Management']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//span[text()='Hotel Facilities']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//span[normalize-space()='Operations']")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//div[@class='gs-acc-header']//span[text()='Account Settings']")).click();
    }
 }

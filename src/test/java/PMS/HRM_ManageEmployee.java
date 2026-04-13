@@ -4,14 +4,12 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class HRM {
+public class HRM_ManageEmployee {
     WebDriver driver;
 
     @BeforeMethod
@@ -61,17 +59,17 @@ public class HRM {
         Thread.sleep(3000);
         actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//span[text='Select property']"));
+        driver.findElement(By.xpath("//p-select[@filterby='propertyName']")).click();
         Thread.sleep(3000);
         actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER);
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//span[text='Select department']")).click();
+        driver.findElement(By.xpath("//span[text()='Select department']")).click();
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//span[text()='Dept 1']")).click();
+        driver.findElement(By.xpath("//span[@class='ng-star-inserted' and text()='Dept 1']")).click();
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//span[text='Select role']")).click();
+        driver.findElement(By.xpath("//span[@aria-label='Select role']")).click();
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//span[text()='Role 1']")).click();
+        driver.findElement(By.xpath("//span[text()='Rol1']")).click();
         Thread.sleep(3000);
         driver.findElement(By.xpath("//input[@placeholder='Select joining date']")).sendKeys("01/04/2026");
         Thread.sleep(3000);
@@ -83,11 +81,11 @@ public class HRM {
         Thread.sleep(3000);
         actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//button[minimize-space()=' Add Employee']")).click();
+        driver.findElement(By.xpath("//button[minimize-space()='Add Employee']")).click();
         Thread.sleep(3000);
 
 
-//        driver.findElement(By.xpath("//a[normalize-space()='Manage Roster']")).click();
+//
 //        Thread.sleep(3000);
 //        driver.findElement(By.xpath("//a[normalize-space()='Manual Attendance']")).click();
 //        Thread.sleep(3000);

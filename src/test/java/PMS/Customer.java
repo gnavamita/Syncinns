@@ -28,4 +28,6 @@ public class Customer {
         driver.findElement(By.xpath("//a[normalize-space()='Customer List']")).click();
         driver.findElement(By.xpath("//a[normalize-space()='Balance Sheet']")).click();
     }
+
+
 }

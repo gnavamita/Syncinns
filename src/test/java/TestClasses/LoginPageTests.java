@@ -25,6 +25,10 @@ public class LoginPageTests {
         @AfterTest
         public void closeBrowser() {
             b.closeBrowser();
+
+
+
+
         }
 
         @Test

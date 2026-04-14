@@ -1,6 +1,9 @@
 package Utilities;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class CommonFunctions extends BaseClass {
@@ -14,13 +17,23 @@ public class CommonFunctions extends BaseClass {
         return driver.findElement(By.xpath(locator)).getText();
     }
 
-    public void typeText(String locator, String text) {
+    public void xpathTypeText(String locator, String text) {
         driver.findElement(By.xpath(locator)).sendKeys(text);
     }
+
+    public void idTypeText(String locator, String text) {
+        driver.findElement(By.id(locator)).sendKeys(text);
+    }
+
 
     public void selectDropdown(String locator, String value) {
         Select select = new Select(driver.findElement(By.xpath(locator)));
         select.selectByValue(value);
+    }
+
+    public void hover(WebElement locator){
+        Actions actions = new Actions(driver);
+        actions.moveToElement(locator).perform();
     }
 
 

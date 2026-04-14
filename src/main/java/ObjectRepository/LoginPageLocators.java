@@ -7,5 +7,5 @@ public class LoginPageLocators {
     public String passwordTextBox = "";
     public String forgetPassword = "";
     public  String rememberMe = "";
-    public  String loginButton = "";
+    public String loginButton = "";
 }

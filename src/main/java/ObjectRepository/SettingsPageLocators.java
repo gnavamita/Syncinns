@@ -11,7 +11,19 @@ public class SettingsPageLocators {
     public String roomManagementText = "";
     public String hotelFacilitiesText = "";
     public String operationsText = "";
-
+    public String selectProperty = "";
+    public String emailBox = "";
+    public String phoneNumberBox = "";
+    public String whatsappBox = "";
+    public String emailFooterBox = "";
+    public String aboutUsLinkBox = "";
+    public String privacyPolicyLink = "";
+    public String termsAndConditionLinkBox = "";
+    public String facebookLinkBox = "";
+    public String xLinkBox = "";
+    public String instagramLinkBox = "";
+    public String youtubeLinkBox = "";
+    public String saveTemplateButton = "";
 
 
 }

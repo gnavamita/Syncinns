@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 
 public class LoginPageTests {
 
-
         BaseClass b = new BaseClass();
         LoginPage l = new LoginPage();
         DashboardPage d = new DashboardPage();
@@ -21,14 +20,9 @@ public class LoginPageTests {
             b.goToURL(this.SyncinnsURL);
         }
 
-
         @AfterTest
         public void closeBrowser() {
             b.closeBrowser();
-
-
-
-
         }
 
         @Test

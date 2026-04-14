@@ -21,8 +21,16 @@ public class CommonFunctions extends BaseClass {
         driver.findElement(By.xpath(locator)).sendKeys(text);
     }
 
+    public void xpathTypeTextClick(String locator){
+        driver.findElement(By.xpath(locator)).click();
+    }
+
     public void idTypeText(String locator, String text) {
         driver.findElement(By.id(locator)).sendKeys(text);
+    }
+
+    public void idTypeTextClick(String locator) {
+        driver.findElement(By.id(locator)).click();
     }
 
 

@@ -22,11 +22,11 @@ public class LoginPage {
     }
 
     public void enterUserName(String username){
-        cf.typeText(ll.usernameTextBox, username);
+        cf.xpathTypeText(ll.usernameTextBox, username);
     }
 
     public void enterPassword(String password){
-        cf.typeText(ll.passwordTextBox, password);
+        cf.xpathTypeText(ll.passwordTextBox, password);
     }
 
     public void clickOnLoginButton() {

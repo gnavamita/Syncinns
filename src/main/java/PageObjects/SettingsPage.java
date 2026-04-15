@@ -94,5 +94,9 @@ public class SettingsPage {
         cf.xpathTypeTextClick(sl.saveTemplateButton);
     }
 
+    public void enterInvoiceTemplateBox(String text){
+        cf.xpathTypeText(sl.invoiceFooterBox, text );
+    }
+
 
 }

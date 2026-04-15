@@ -6,7 +6,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class SettingsTests {
+public class SettingsPageTests {
 
     BaseClass b = new BaseClass();
     SettingsPage s = new SettingsPage();
@@ -37,7 +37,18 @@ public class SettingsTests {
         s.enterInstagramLink("");
         s.enterYoutubeLink("");
         s.clickOnSaveTemplateButton();
-
+        s.enterAboutUsLink("");
     }
+
+    @Test
+    public void fill_Invoice_Template(){
+        s.selectPropertyFromDropdown("");
+        s.enterEmailId("");
+        s.enterPhoneNumber("");
+        s.enterWhatsappNumber("");
+        s.enterInvoiceTemplateBox("");
+    }
+
+
 
 }

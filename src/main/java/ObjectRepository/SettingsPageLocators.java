@@ -24,6 +24,7 @@ public class SettingsPageLocators {
     public String instagramLinkBox = "";
     public String youtubeLinkBox = "";
     public String saveTemplateButton = "";
+    public String invoiceFooterBox ="";
 
 
 }

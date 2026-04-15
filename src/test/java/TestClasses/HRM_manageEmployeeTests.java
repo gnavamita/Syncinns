@@ -32,6 +32,12 @@ public class HRM_manageEmployeeTests {
         m.enterEmploymentType("");
         m.enterAddress("");
         m.selectProperty("");
+        m.selectDepartment("");
+        m.selectRole("");
+        m.enterJoiningDate("");
+        m.selectShiftTime("");
+        m.enterPassword("");
+        m.CLickOnAddEmployeeButton();
 
 
     }

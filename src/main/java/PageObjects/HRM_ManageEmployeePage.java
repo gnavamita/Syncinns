@@ -57,14 +57,46 @@ public class HRM_ManageEmployeePage {
         }
     }
 
-            public void selectDepartment(String dept){
+    public void selectDepartment(String dept) {
         try {
             cf.xpathTypeTextClick(ml.departmentDropdown);
             Thread.sleep(3000);
             cf.selectDropdown(ml.departmentDropdown, dept);
+        } catch (Exception e) {
+            System.out.println("error occurred " + e.getMessage());
         }
-        catch (Exception e){
-            System.out.println("error occurred "+ e.getMessage());
+    }
+
+    public void selectRole(String role) {
+        try {
+            cf.xpathTypeTextClick(ml.roleDropdown);
+            Thread.sleep(3000);
+            cf.selectDropdown(ml.roleDropdown, role);
+        } catch (Exception e) {
+            System.out.println("error occurred " + e.getMessage());
         }
-            }
+    }
+
+    public void enterJoiningDate(String joining_date){
+        cf.xpathTypeText(ml.JoiningDateDropdown, joining_date );
+    }
+
+    public void selectShiftTime(String shiftTime){
+        try{
+        cf.xpathTypeTextClick(ml.shiftTimeDropdown);
+        Thread.sleep(3000);
+        cf.selectDropdown(ml.shiftTimeDropdown, shiftTime);
+          }
+          catch (Exception e) {
+        System.out.println("error occurred " + e.getMessage());
+    }
+    }
+
+    public void enterPassword(String password){
+        cf.xpathTypeText(ml.newPasswordDropdown, password );
+    }
+
+    public void CLickOnAddEmployeeButton(){
+        cf.xpathTypeTextClick(ml.addEmployeeButton);
+    }
 }

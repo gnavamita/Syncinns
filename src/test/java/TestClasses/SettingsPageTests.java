@@ -38,6 +38,8 @@ public class SettingsPageTests {
         s.enterYoutubeLink("");
         s.clickOnSaveTemplateButton();
         s.enterAboutUsLink("");
+
+
     }
 
     @Test

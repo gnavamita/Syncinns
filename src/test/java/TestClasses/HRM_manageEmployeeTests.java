@@ -9,12 +9,12 @@ public class HRM_manageEmployeeTests {
     HRM_ManageEmployeePage m = new HRM_ManageEmployeePage();
     BaseClass b = new BaseClass();
 
-    String ManageEmployeeURL = "https://app.syncinns.com/login";
+    String syncinnsURL = "https://app.syncinns.com/login";
 
     @BeforeTest
     public void goToURL(){
         b.openBrowser();
-        b.goToURL(this.ManageEmployeeURL);
+        b.goToURL(this.syncinnsURL);
     }
 
     @AfterTest

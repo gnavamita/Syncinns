@@ -4,6 +4,7 @@ import PageObjects.HRM_ManageEmployeePage;
 import Utilities.BaseClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 public class HRM_manageEmployeeTests {
     HRM_ManageEmployeePage m = new HRM_ManageEmployeePage();
@@ -22,6 +23,7 @@ public class HRM_manageEmployeeTests {
         b.closeBrowser();
     }
 
+    @Test
     public void Add_Employee_with_correct_credentials(){
         m.enterFirstName("");
         m.enterLastName("");

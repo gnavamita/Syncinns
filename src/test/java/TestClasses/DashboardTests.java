@@ -4,6 +4,7 @@ import PageObjects.DashboardPage;
 import Utilities.BaseClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 public class DashboardTests {
     BaseClass b = new BaseClass();
@@ -22,6 +23,7 @@ public class DashboardTests {
         b.closeBrowser();
     }
 
+    @Test
     public void User_a_able_to_View_correct_Headings(){
         d.initialVerifications();
     }

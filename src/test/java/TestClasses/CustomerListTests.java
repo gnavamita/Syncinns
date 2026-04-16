@@ -4,6 +4,7 @@ import PageObjects.Customer_CustomerListPage;
 import Utilities.BaseClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 public class CustomerListTests {
     BaseClass b = new BaseClass();
@@ -23,6 +24,7 @@ public class CustomerListTests {
         b.closeBrowser();
     }
 
+    @Test
     public void create_Customer_With_valid_Details(){
         c.clickOnCustomer();
         c.clickOnCustomerList();
@@ -36,6 +38,7 @@ public class CustomerListTests {
         c.clickAddButton();
     }
 
+    @Test
     public void verifyCustomerPageRL(){
         c.verifyCustomerListPageURL();
     }

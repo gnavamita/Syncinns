@@ -5,6 +5,7 @@ import PageObjects.MaintenanceListPage;
 import Utilities.BaseClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 public class MaintenanceListTests {
     BaseClass b = new BaseClass();
@@ -24,6 +25,7 @@ public class MaintenanceListTests {
         b.closeBrowser();
     }
 
+    @Test
     public void create_Maintenance_List_with_valid_credentials() {
         l.enterUserName("");
         l.enterPassword("");
@@ -36,7 +38,12 @@ public class MaintenanceListTests {
         mp.selectTypeOfRequest("");
         mp.selectAssignedToType("");
         mp.selectEmployeeToType("");
-
+        mp.RoomOrAreaNumber("");
+        mp.enterExpectedDuration("");
+        mp.enterEmail("");
+        mp.enterWhatsappNumber("");
+        mp.enterDescription("");
+        mp.clickOnSubmitButton();
     }
 
 }

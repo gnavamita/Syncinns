@@ -38,7 +38,6 @@ public class ManageRoomRateTests {
         rp.enterHalfMealRate("");
         rp.enterFullMealRate("");
 
-
     }
 
 

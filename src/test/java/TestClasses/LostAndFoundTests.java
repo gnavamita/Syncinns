@@ -6,6 +6,7 @@ import Utilities.BaseClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
 
 public class LostAndFoundTests {
     BaseClass b = new BaseClass();
@@ -14,8 +15,7 @@ public class LostAndFoundTests {
 
     public String syncinnsURL = "https://app.syncinns.com/";
 
-    BeforeTest
-
+    @BeforeTest
     public void openBrowser() {
         b.openBrowser();
         b.goToURL(this.syncinnsURL);
@@ -26,6 +26,7 @@ public class LostAndFoundTests {
         b.closeBrowser();
     }
 
+    @Test
     public void submit_form_with_all_valid_Inputs() {
         l.enterUserName("");
         l.enterPassword("");
